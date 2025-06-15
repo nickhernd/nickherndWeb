@@ -1,0 +1,127 @@
+/* Estilos específicos para las páginas de artículos del blog */
+
+.blog-post-page .post-content {
+    max-width: 800px;
+    /* Ancho máximo para el contenido de un artículo, como en un periódico */
+    margin: 2rem auto;
+    /* Centrar el contenido */
+    padding: 2rem;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-post-page .post-title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    /* Título del post alineado a la izquierda */
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 15px;
+}
+
+.blog-post-page .post-meta {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    border-bottom: 1px dashed var(--border-color);
+    /* Línea punteada bajo la meta */
+    padding-bottom: 15px;
+    display: block;
+    /* Para que ocupe toda la línea */
+}
+
+.blog-post-page p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    /* Texto más grande para mejor lectura */
+    line-height: 1.8;
+    /* Mayor espaciado entre líneas */
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-page h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.blog-post-page h3 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Estilos para imágenes dentro del artículo */
+.blog-post-page figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.blog-post-page figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Elimina espacio extra debajo de la imagen */
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    /* Borde sutil para imágenes */
+    border-radius: 2px;
+}
+
+.blog-post-page figcaption {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Estilo para el botón de contacto dentro del blog post */
+.blog-post-page .btn-primary {
+    margin-top: 2rem;
+    text-align: center;
+    /* Centrar el botón si es necesario */
+}
+
+/* Responsive para el contenido del blog */
+@media (max-width: 768px) {
+    .blog-post-page .post-content {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .blog-post-page .post-title {
+        font-size: 2.2rem;
+    }
+
+    .blog-post-page p {
+        font-size: 1rem;
+    }
+
+    .blog-post-page h2 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post-page h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post-page .post-title {
+        font-size: 1.8rem;
+        text-align: center;
+        /* Centrar título en móviles pequeños */
+    }
+
+    .blog-post-page .post-meta {
+        text-align: center;
+        /* Centrar meta en móviles pequeños */
+    }
+}

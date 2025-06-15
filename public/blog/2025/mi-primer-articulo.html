@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Artículo: Un Comienzo - Mi Sitio Web</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../index.html">Mi Sitio Web</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="mi-primer-articulo.html">Blog</a></li>
+                <li><a href="../../portfolio/proyecto-a/index.html">Portfolio</a></li>
+                <li><a href="../../about.html">Sobre Mí</a></li>
+                <li><a href="../../contact.html">Contacto</a></li>
+                <li><a href="/private/index.html" class="private-access-btn">Acceso Privado</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-switcher">Modo Oscuro</button>
+    </header>
+
+    <main class="blog-post-page">
+        <article class="post-content">
+            <h1 class="post-title">Mi Primer Artículo: <span class="highlight">Un Comienzo</span></h1>
+            <p class="post-meta">Publicado el 15 de Junio, 2025 por Tu Nombre</p>
+
+            <p>¡Hola a todos! Es un placer darles la bienvenida a mi espacio digital. Después de mucho pensarlo, he
+                decidido crear este sitio web como un rincón donde compartiré mis ideas, mis proyectos y, en general, un
+                poco de mi vida en el mundo <span class="highlight">digital</span>.</p>
+
+            <p>Siempre me ha fascinado la idea de tener un lugar propio en internet, un lienzo personal donde poder
+                expresarme libremente. Este proyecto es una combinación de mis pasiones: desde el desarrollo web y el
+                diseño (que verán en la sección de <span class="highlight">Portfolio</span>), hasta mis pensamientos y
+                reflexiones diarias que encontrarán aquí en el <span class="highlight">Blog</span>.</p>
+
+            <h2>¿Qué esperar de este Blog?</h2>
+            <p>Mi objetivo es que este blog sea un espacio dinámico. Hablaré de tecnología, de mis experiencias en
+                aprendizaje, de algún proyecto personal en el que esté inmerso, y quizás, de vez en cuando, de temas más
+                cotidianos que me interesen. La idea es mantener una <span class="highlight">frecuencia de
+                    publicación</span> que me permita ofrecer contenido de calidad sin sacrificar mi tiempo para
+                investigar y crear.</p>
+
+            <figure>
+                <img src="../../img/placeholder-blog-image.jpg" alt="Imagen de bienvenida al blog">
+                <figcaption>Una imagen para acompañar mis primeras palabras en este rincón.</figcaption>
+            </figure>
+
+            <h2>El Camino por Delante</h2>
+            <p>Sé que construir un sitio web con secciones públicas y privadas es un reto, pero estoy emocionado. La
+                parte pública será mi ventana al mundo, un espacio abierto para cualquiera que desee explorar mi trabajo
+                y mis ideas. La sección <span class="highlight">privada</span>, por otro lado, será un área más
+                personal, un lugar seguro para mis proyectos confidenciales, mis herramientas de seguimiento y,
+                eventualmente, un espacio para mis amigos más cercanos con diferentes niveles de acceso.</p>
+
+            <p>Este es solo el comienzo. Espero que disfruten explorando este sitio tanto como yo disfruto creándolo.
+                Sus comentarios y sugerencias siempre serán bienvenidos. ¡Gracias por pasarte!</p>
+
+            <h3>¡Mantente Conectado!</h3>
+            <p>No dudes en seguirme en mis redes sociales o contactarme a través del formulario. Estaré encantado de
+                escuchar tus impresiones.</p>
+
+            <a href="../../contact.html" class="btn-primary">Contactar Ahora</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tu Nombre/Tu Marca. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        // Re-inicializa el script de cambio de tema en esta página
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            const setTheme = (theme) => {
+                if (theme === 'dark') {
+                    body.classList.add('dark-mode');
+                    themeToggleBtn.textContent = 'Modo Claro';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-mode');
+                    themeToggleBtn.textContent = 'Modo Oscuro';
+                    localStorage.setItem('theme', 'light');
+                }
+            };
+
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else if (prefersDark) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                if (body.classList.contains('dark-mode')) {
+                    setTheme('light');
+                } else {
+                    setTheme('dark');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
